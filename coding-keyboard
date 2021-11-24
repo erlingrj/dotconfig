@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Numbers first row
+#xmodmap -e "keycode 17 = 8 bar"
+#xmodmap -e "keycode 18 = 9 backslash"# Special keys
+#xmodmap -e "keycode 51 = apostrophe numbersign"
+#xmodmap -e "keycode 91 mod2 = KP_Delete period"# Umlaut
+
+xmodmap -e "keycode 34 = braceleft braceright"
+xmodmap -e "keycode 47 = parenleft parenright"
+xmodmap -e "keycode 48 = bracketleft bracketright"

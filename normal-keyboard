@@ -1,0 +1,9 @@
+#!/bin/bash
+# Numbers first row
+#xmodmap -e "keycode 17 = 8 parenleft NoSymbol NoSymbol bracketleft"
+#xmodmap -e "keycode 18 = 9 parenright NoSymbol NoSymbol bracketright"# Special keys
+#xmodmap -e "keycode 51 = numbersign apostrophe"
+#xmodmap -e "keycode 91 mod2 = KP_Delete comma"# Umlaut
+xmodmap -e "keycode 34 = aring Aring"
+xmodmap -e "keycode 47 = oslash Oslash"
+xmodmap -e "keycode 48 = ae Ae"
