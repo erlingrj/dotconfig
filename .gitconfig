@@ -1,3 +1,21 @@
 [user]
 	email = erling.jellum@gmail.com
 	name = erlingrj
+[alias]
+	st = status -sb
+  pl = pull
+  ps = push
+  psu = push -u origin HEAD
+  lg = log --graph --oneline --decorate
+  l = log --oneline --decorate
+	co = checkout
+	su = submodule update --init --recursive
+	b = checkout -b
+	cmu = commit -m \"update\"
+	cm = commit -m
+	ai = add -i
+	who = shortlog -s -n --all
+[credential]
+	helper = store
+[core]
+	autocrlf = input
