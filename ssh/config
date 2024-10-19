@@ -1,0 +1,27 @@
+Include config.d/**/*ssh.config
+Include /home/erling/dev/xronos/soafee-blueprint/instances/soafee-ssh.config
+Host pylf-vm
+  HostName 10.181.239.60
+  User ubuntu
+
+Host soafee-avp-federates
+  HostName soafee-avp-federates
+  User erlingrj
+
+Host soafee-avp-render
+  HostName soafee-avp-render
+  User erlingrj
+
+Host desktop
+  HostName 10.147.20.58
+  User erling
+
+Host redneck
+  HostName 128.32.171.201
+  User redneck
+  ForwardAgent yes
+
+Host centos
+ HostName 127.0.0.1
+ Port 2222
+ User centos

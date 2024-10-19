@@ -96,6 +96,8 @@ alias l='ls -CF'
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
+alias resnap='/home/erling/tools/reSnap.sh --copy -o /home/erling/Pictures/rem.png'
+
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
@@ -116,12 +118,43 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# Set the screen resolution
-xrandr -s 1440x900
+# Add RISCV GCC to PATH
+export PATH=$PATH:/opt/riscv32-unknown-elf/bin
+# Add my personal bin to PATH
+export PATH=$PATH:/home/erling/bin
 
-#Update keyboard
-xmodmap -e "keycode 13 = 4 dollar"
-#xmodmap -e "keycode 17 = 8 parenleft braceleft"
-#xmodmap -e "keycode 18 = 9 parenright braceright"
-xmodmap -e "keycode 49 = apostrophe"
+# Setup som environment variables
+export DESKTOP=erling@10.147.20.58
+export REM=root@10.11.99.1
+export KRIA=ubuntu@192.168.234.97
+export PICO=/media/erling/RPI-RP2
+export KUBECONFIG=/home/erling/.kube/config
+# Set Zephyr environment variable
+# export ZEPHYR_BASE=/home/erling/tools/zephyrproject/zephyr
+
+# Set up Rust environment
+. "$HOME/.cargo/env"
+
+# Set up ARM GCC for sentiboard2
+export ARMGCC_DIR=/opt/gcc-arm-none-eabi-10.3-2021.07
+export NXP_SDK_DIR=/home/erling/senti/senti-tsn/eaimxrt1176_sdk_2_11_0_2022-03-02
+
+export RIOT_DIR=/home/erling/dev/RIOT
+
+export PATH=$PATH:/opt/idea-IC-233.13135.103/bin/
+export PATH=$PATH:/usr/local/LinkServer
+
+source /home/erling/dev/flexpret/env.bash
+source /home/erling/dev/reactor-uc/env.bash
+export RISCV_TOOL_PATH_PREFIX=/opt/xpack-riscv-none-elf-gcc-14.2.0-2/
+export PICO_SDK_PATH=/opt/pico-sdk
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+export STM32_PRG_PATH=/home/erling/STMicroelectronics/STM32Cube/STM32CubeProgrammer/bin
+
+fish
+
 
